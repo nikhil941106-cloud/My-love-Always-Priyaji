@@ -82,3 +82,19 @@ box-shadow:0 0 20px #ff007f;
 }
 
 .hidden{ display:none; }
+.love{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+color:#ff007f;
+text-shadow:0 0 30px #ff007f;
+animation:zoom 1s ease-in-out infinite alternate;
+z-index:10;
+}
+
+@keyframes zoom{
+from{transform:translate(-50%,-50%) scale(1);}
+to{transform:translate(-50%,-50%) scale(1.2);}
+}
