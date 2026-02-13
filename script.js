@@ -93,10 +93,23 @@ document.getElementById("effect").appendChild(el);
 }
 
 function yes(){
-alert("Forever Together ❤️💍");
-generate("💍",25,2);
+
+// Show Love Message
+document.getElementById("loveMessage").classList.remove("hidden");
+
+// Heart Explosion
+for(let i=0;i<60;i++){
+let heart=document.createElement("div");
+heart.className="floating";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"%";
+heart.style.animationDuration=(2+Math.random()*2)+"s";
+document.getElementById("effect").appendChild(heart);
 }
 
-function no(){
-alert("No option allowed 😘");
+// BONUS: Auto Hide After 5 Seconds
+setTimeout(function(){
+document.getElementById("loveMessage").classList.add("hidden");
+},5000);
+
 }
